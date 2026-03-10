@@ -5,7 +5,7 @@
 
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -45,23 +45,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-18">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="w-9 h-9 rounded bg-[oklch(0.82_0.18_85)] flex items-center justify-center flex-shrink-0">
-              <Zap className="w-5 h-5 text-[oklch(0.1_0.005_260)]" />
-            </div>
-            <div className="flex flex-col leading-none">
-              <span
-                className="font-bold text-[oklch(0.82_0.18_85)] tracking-widest uppercase"
-                style={{ fontFamily: "Rajdhani, sans-serif", fontSize: "1.1rem" }}
-              >
-                RAMs
-              </span>
-              <span
-                className="text-[oklch(0.6_0.01_260)] tracking-widest"
-                style={{ fontFamily: "JetBrains Mono, monospace", fontSize: "0.6rem" }}
-              >
-                FRC #7729
-              </span>
-            </div>
+            <img
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663418944140/X4Be2XfiomkNw7gY9gk5Hg/52135199_1023279997878410_4518729955340713984_n_fca10169.jpg"
+              alt="RAMs 7729 Logo"
+              className="w-10 h-10 flex-shrink-0"
+            />
           </Link>
 
           {/* Desktop Nav */}

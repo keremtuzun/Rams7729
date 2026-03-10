@@ -65,28 +65,37 @@ export default function Home() {
               FIRST Robotics Competition · Team #7729
             </div>
 
-            <h1
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-none mb-6"
-              style={{ fontFamily: "Rajdhani, sans-serif", letterSpacing: "0.02em" }}
-            >
-              <span className="text-[oklch(0.82_0.18_85)]">RAMs</span> 7729
-              <br />
-              <span className="text-[oklch(0.94_0.005_65)]">Robotics</span>
-            </h1>
+            <div className="flex items-start gap-6 mb-6">
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663418944140/X4Be2XfiomkNw7gY9gk5Hg/52135199_1023279997878410_4518729955340713984_n_fca10169.jpg"
+                alt="RAMs 7729 Logo"
+                className="w-32 h-32 flex-shrink-0 hidden sm:block"
+              />
+              <div>
+                <h1
+                  className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-none mb-6"
+                  style={{ fontFamily: "Rajdhani, sans-serif", letterSpacing: "0.02em" }}
+                >
+                  <span className="text-[oklch(0.82_0.18_85)]">RAMs</span> 7729
+                  <br />
+                  <span className="text-[oklch(0.94_0.005_65)]">Robotics</span>
+                </h1>
+              </div>
+            </div>
 
             <p className="text-[oklch(0.75_0.005_65)] text-lg leading-relaxed mb-8 max-w-lg">
               Designing, building, and programming competition robots from Koç School, Istanbul.
               Where engineering meets passion.
             </p>
+          </div>
 
-            <div className="flex flex-wrap gap-3">
-              <Link href="/robot" className="btn-gold px-6 py-3 rounded flex items-center gap-2 text-sm">
-                See Our Robot <ChevronRight className="w-4 h-4" />
-              </Link>
-              <Link href="/about" className="btn-outline-gold px-6 py-3 rounded flex items-center gap-2 text-sm">
-                Meet the Team
-              </Link>
-            </div>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/robot" className="btn-gold px-6 py-3 rounded flex items-center gap-2 text-sm">
+              See Our Robot <ChevronRight className="w-4 h-4" />
+            </Link>
+            <Link href="/about" className="btn-outline-gold px-6 py-3 rounded flex items-center gap-2 text-sm">
+              Meet the Team
+            </Link>
           </div>
         </div>
 
