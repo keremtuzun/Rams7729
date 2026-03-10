@@ -42,22 +42,6 @@ const subsystems = [
       { label: "Control", value: "Simple On/Off" },
     ],
   },
-
-  {
-    id: "vision",
-    icon: Eye,
-    name: "Vision System",
-    tag: "Sensing & Autonomy",
-    summary: "Camera-based game piece detection and field awareness.",
-    details:
-      "We use a USB camera mounted on the robot to detect game pieces and field targets. The vision pipeline processes images to identify game piece colors and positions, allowing the robot to autonomously align with scoring targets. The camera feed is also available to the drive team on the driver station for real-time situational awareness during matches.",
-    specs: [
-      { label: "Camera", value: "USB Webcam" },
-      { label: "Pipeline FPS", value: "30 FPS" },
-      { label: "Detection", value: "Color-based" },
-      { label: "Processing", value: "OpenCV" },
-    ],
-  },
 ];
 
 export default function Robot() {
@@ -197,7 +181,7 @@ export default function Robot() {
                   { label: "Robot Platform", value: "2026 KitBot" },
                   { label: "Control System", value: "WPILib / Java" },
                   { label: "Build Time", value: "6 weeks" },
-                  { label: "Robot Weight", value: "~120 lbs" },
+                  { label: "Robot Weight", value: "40 kg" },
                 ].map((item) => (
                   <div key={item.label} className="bg-[oklch(0.18_0.008_260)] rounded p-3 border border-[oklch(0.28_0.008_260)]">
                     <div

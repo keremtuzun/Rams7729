@@ -42,17 +42,6 @@ const engineeringAreas = [
       { label: "Pneumatics", detail: "REV Pneumatics Hub with double-solenoid valves for actuators" },
     ],
   },
-  {
-    icon: BarChart3,
-    title: "Sensors & Feedback",
-    items: [
-      { label: "Wheel Encoders", detail: "CANCoder absolute magnetic encoders on each swerve module" },
-      { label: "IMU", detail: "Pigeon 2.0 gyroscope/accelerometer for field-relative driving" },
-      { label: "Vision", detail: "Limelight 3 for AprilTag detection and pose estimation" },
-      { label: "Game Piece Detection", detail: "Beam-break sensors for intake indexing" },
-      { label: "Limit Switches", detail: "Magnetic limit switches for elevator home position" },
-    ],
-  },
 ];
 
 const codeSnippet = `// Swerve Drive Pose Estimator with Vision Fusion
