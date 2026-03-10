@@ -2,13 +2,29 @@
    RAMs 7729 – Outreach Page
    ============================================================ */
 
-import { BookOpen, Users, Globe, Star } from "lucide-react";
+import { BookOpen, Users, Globe, Star, Podcast, MapPin } from "lucide-react";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const OUTREACH_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663418944140/X4Be2XfiomkNw7gY9gk5Hg/outreach-stem-WYShCuPi7xpNCLwtzanDmc.webp";
 
 const programs = [
+  {
+    icon: Podcast,
+    title: "RAMs Robotics Podcast",
+    tag: "Audio Series",
+    desc: "We produce a monthly podcast featuring interviews with team members, engineering deep-dives, competition recaps, and discussions about STEM education. Episodes are available on all major podcast platforms, bringing the robotics experience to listeners worldwide.",
+    impact: "1000+ listeners",
+    frequency: "Monthly episodes",
+  },
+  {
+    icon: Globe,
+    title: "Virtual Istanbul Archaeology Museum Tour",
+    tag: "Educational Program",
+    desc: "A groundbreaking initiative to make cultural education accessible to underprivileged students. We've created a virtual 3D tour of Istanbul's archaeology museum, complete with interactive exhibits and educational content. Students can explore historical artifacts and learn about Istanbul's rich heritage from anywhere.",
+    impact: "500+ students reached",
+    frequency: "Ongoing access",
+  },
   {
     icon: BookOpen,
     title: "STEM Workshops",
@@ -25,25 +41,19 @@ const programs = [
     impact: "4 FLL teams mentored",
     frequency: "Seasonal program",
   },
-  {
-    icon: Globe,
-    title: "Open House Events",
-    tag: "Community",
-    desc: "We host open house events at our school workshop where parents, students, and community members can see our robot up close, talk to team members, and learn about the FRC program. These events help recruit new team members and build community awareness of STEM opportunities.",
-    impact: "300+ visitors annually",
-    frequency: "2× per year",
-  },
-  {
-    icon: Star,
-    title: "Demo Matches",
-    tag: "Demonstration",
-    desc: "We bring our robot to school events, science fairs, and community gatherings to demonstrate what FRC robots can do. Live demonstrations create memorable experiences that inspire younger students to pursue robotics and engineering.",
-    impact: "10+ demos per year",
-    frequency: "Throughout the year",
-  },
 ];
 
 const activities = [
+  {
+    year: "2025",
+    title: "Virtual Museum Launch",
+    desc: "Launched the Virtual Istanbul Archaeology Museum tour, providing free access to underprivileged students across Turkey.",
+  },
+  {
+    year: "2025",
+    title: "Podcast Series Begins",
+    desc: "Started the RAMs Robotics Podcast with monthly episodes featuring team stories and engineering insights.",
+  },
   {
     year: "2024",
     title: "Istanbul STEM Festival",
@@ -52,7 +62,7 @@ const activities = [
   {
     year: "2024",
     title: "Koç School Science Fair",
-    desc: "Hosted a robotics showcase at the school science fair, demonstrating autonomous robot capabilities to students and parents.",
+    desc: "Hosted a robotics showcase at the school science fair, demonstrating robot capabilities to students and parents.",
   },
   {
     year: "2023",
@@ -63,16 +73,6 @@ const activities = [
     year: "2023",
     title: "Elementary School Visits",
     desc: "Visited four elementary schools in the Tuzla district with a portable robot demonstration and coding activity.",
-  },
-  {
-    year: "2022",
-    title: "Robotics Summer Camp",
-    desc: "Organized a week-long robotics summer camp for 25 middle school students, covering programming, electronics, and mechanical design.",
-  },
-  {
-    year: "2022",
-    title: "Community Workshop Series",
-    desc: "Launched a monthly workshop series open to all Koç School students interested in robotics, regardless of team membership.",
   },
 ];
 
@@ -92,8 +92,8 @@ export default function Outreach() {
               <span className="text-[oklch(0.82_0.18_85)]">Outreach</span> & Community
             </h1>
             <p className="text-[oklch(0.65_0.01_260)] max-w-2xl leading-relaxed text-lg">
-              RAMs 7729 believes that inspiring the next generation of engineers is just as
-              important as winning on the field. Here's how we give back to our community.
+              RAMs 7729 believes that inspiring the next generation of engineers and making education
+              accessible to all is just as important as winning on the field. Here's how we give back to our community.
             </p>
           </AnimatedSection>
         </div>
@@ -120,9 +120,9 @@ export default function Outreach() {
         <div className="container">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             {[
-              { value: "500+", label: "Students Reached" },
+              { value: "1000+", label: "Podcast Listeners" },
+              { value: "500+", label: "Museum Tour Users" },
               { value: "4", label: "FLL Teams Mentored" },
-              { value: "10+", label: "Demos Per Year" },
               { value: "3+", label: "Partner Schools" },
             ].map((stat, i) => (
               <AnimatedSection key={stat.label} delay={i * 80}>
@@ -252,7 +252,8 @@ export default function Outreach() {
                 and innovators by engaging them in exciting mentor-based programs that build
                 science, engineering, and technology skills, inspire innovation, and foster
                 well-rounded life capabilities including self-confidence, communication, and leadership.
-                RAMs 7729 is proud to carry that mission forward in Istanbul and beyond.
+                RAMs 7729 is proud to carry that mission forward in Istanbul and beyond — making sure
+                that every student, regardless of background, has access to STEM education and opportunity.
               </p>
             </div>
           </AnimatedSection>

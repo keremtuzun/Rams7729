@@ -15,61 +15,47 @@ const subsystems = [
   {
     id: "drivetrain",
     icon: Cog,
-    name: "Swerve Drive",
+    name: "Tank Drive",
     tag: "Drivetrain",
-    summary: "Omnidirectional movement with four independently steerable modules.",
+    summary: "Dual-side differential drive for reliable and predictable movement.",
     details:
-      "Our robot uses a custom swerve drive base with four MK4i swerve modules, each driven by a NEO brushless motor and steered by a NEO 550. This configuration allows the robot to move in any direction without rotating, enabling complex autonomous maneuvers and responsive driver control. The drivetrain is controlled using a closed-loop PID system with CANCoder absolute encoders for precise wheel angle feedback.",
+      "Our 2026 KitBot uses a traditional tank drive configuration with two independent drive motors — one for the left side and one for the right side. This simple yet effective drivetrain provides excellent traction and predictable handling on the competition field. The tank drive is controlled through arcade or tank drive input, allowing the driver to smoothly accelerate, decelerate, and rotate the robot with precision.",
     specs: [
-      { label: "Drive Motors", value: "4× NEO Brushless" },
-      { label: "Steer Motors", value: "4× NEO 550" },
-      { label: "Max Speed", value: "~4.5 m/s" },
-      { label: "Encoders", value: "CANCoder Absolute" },
-    ],
-  },
-  {
-    id: "elevator",
-    icon: Zap,
-    name: "Elevator Mechanism",
-    tag: "Manipulator",
-    summary: "Multi-stage linear elevator for reaching high scoring positions.",
-    details:
-      "A two-stage cascading elevator powered by dual NEO motors through a 10:1 gearbox gives the robot vertical reach of over 1.5 meters. The elevator uses a continuous loop of 3/16\" Dyneema cord and precision linear bearings for smooth, reliable extension. Position control is implemented with a motion-profiled PID controller, allowing the robot to reach preset heights autonomously.",
-    specs: [
-      { label: "Motors", value: "2× NEO (10:1 GB)" },
-      { label: "Max Height", value: "1.52 m" },
-      { label: "Stages", value: "2-stage cascade" },
-      { label: "Control", value: "Motion-profiled PID" },
+      { label: "Drive Motors", value: "2× Falcon 500" },
+      { label: "Gearbox", value: "KitBot Gearbox" },
+      { label: "Max Speed", value: "~3.5 m/s" },
+      { label: "Wheelbase", value: "KitBot Standard" },
     ],
   },
   {
     id: "intake",
-    icon: Cpu,
-    name: "Intake & Shooter",
-    tag: "Game Piece Handler",
-    summary: "Precision intake and flywheel shooter for consistent scoring.",
+    icon: Zap,
+    name: "Game Piece Intake",
+    tag: "Manipulator",
+    summary: "Efficient intake mechanism for collecting game pieces from the field.",
     details:
-      "The intake system uses compliant wheels driven by a single Falcon 500 motor to collect game pieces from the floor. A beam-break sensor detects when a piece is fully indexed. The shooter uses dual Falcon 500 motors spinning a pair of 4-inch polyurethane wheels at variable speeds, with a hood angle adjustment for different shot distances. Shooting parameters are tuned using a lookup table based on distance from the target.",
+      "Our intake system uses a single Falcon 500 motor driving compliant wheels to collect game pieces from the floor. The intake is mounted at an optimal angle to smoothly guide pieces into the robot's storage area. A beam-break sensor detects when a piece is fully indexed, allowing the drive team to know when the robot is ready to score. The intake can be quickly raised or lowered depending on game strategy.",
     specs: [
       { label: "Intake Motor", value: "Falcon 500" },
-      { label: "Shooter Motors", value: "2× Falcon 500" },
-      { label: "Wheel Diameter", value: "4 in polyurethane" },
-      { label: "Sensor", value: "Beam-break + encoder" },
+      { label: "Wheel Material", value: "Compliant Wheels" },
+      { label: "Sensor", value: "Beam-break Detector" },
+      { label: "Control", value: "Simple On/Off" },
     ],
   },
+
   {
     id: "vision",
     icon: Eye,
     name: "Vision System",
     tag: "Sensing & Autonomy",
-    summary: "AprilTag detection for field localization and auto-targeting.",
+    summary: "Camera-based game piece detection and field awareness.",
     details:
-      "We use a Limelight 3 camera mounted at the front of the robot to detect AprilTag fiducial markers placed around the field. The vision pipeline runs at 90 FPS and provides pose estimates that are fused with wheel odometry using a Kalman filter in WPILib's SwerveDrivePoseEstimator. This gives the robot accurate field-relative positioning for autonomous path-following and driver-assist targeting.",
+      "We use a USB camera mounted on the robot to detect game pieces and field targets. The vision pipeline processes images to identify game piece colors and positions, allowing the robot to autonomously align with scoring targets. The camera feed is also available to the drive team on the driver station for real-time situational awareness during matches.",
     specs: [
-      { label: "Camera", value: "Limelight 3" },
-      { label: "Pipeline FPS", value: "90 FPS" },
-      { label: "Targets", value: "AprilTag (36h11)" },
-      { label: "Fusion", value: "Kalman filter + odometry" },
+      { label: "Camera", value: "USB Webcam" },
+      { label: "Pipeline FPS", value: "30 FPS" },
+      { label: "Detection", value: "Color-based" },
+      { label: "Processing", value: "OpenCV" },
     ],
   },
 ];
@@ -85,7 +71,7 @@ export default function Robot() {
         <div className="absolute inset-0 dot-grid opacity-15" />
         <div className="container relative">
           <AnimatedSection>
-            <div className="section-label mb-3">2025 Season</div>
+            <div className="section-label mb-3">2026 Season</div>
             <h1
               className="text-5xl lg:text-6xl font-bold text-[oklch(0.94_0.005_65)] mb-5"
               style={{ fontFamily: "Rajdhani, sans-serif" }}
@@ -93,8 +79,8 @@ export default function Robot() {
               Our <span className="text-[oklch(0.82_0.18_85)]">Robot</span>
             </h1>
             <p className="text-[oklch(0.65_0.01_260)] max-w-2xl leading-relaxed text-lg">
-              Designed, built, and programmed entirely by students in six weeks. Here's a
-              deep dive into the engineering decisions that shaped our 2025 competition robot.
+              Built from the 2026 KitBot platform, our robot features a tank drive, game piece intake,
+              and vision system. Here's a deep dive into the engineering decisions that shaped our competition robot.
             </p>
           </AnimatedSection>
         </div>
@@ -113,7 +99,7 @@ export default function Robot() {
               <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.1_0.008_260/0.7)] to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="flex flex-wrap gap-3">
-                  {["Swerve Drive", "Elevator", "Intake/Shooter", "Vision System", "AprilTag"].map((tag) => (
+                  {["Tank Drive", "Game Piece Intake", "Vision System", "KitBot", "2026"].map((tag) => (
                     <span
                       key={tag}
                       className="px-3 py-1 rounded bg-[oklch(0.82_0.18_85/0.15)] border border-[oklch(0.82_0.18_85/0.3)] text-[oklch(0.82_0.18_85)] text-xs"
@@ -231,21 +217,21 @@ export default function Robot() {
                 From CAD to <span className="text-[oklch(0.82_0.18_85)]">Competition</span>
               </h2>
               <p className="text-[oklch(0.65_0.01_260)] leading-relaxed mb-4">
-                Every component is designed in Onshape before a single piece of metal is cut.
-                Our CAD team creates detailed assemblies that allow the mechanical team to
-                identify interference issues and optimize weight distribution before fabrication.
+                Our 2026 robot is built on the KitBot platform, a proven foundation that allows us to focus on
+                game-specific mechanisms and strategy. We customize the KitBot with our own intake system,
+                electrical components, and software to create a competitive robot.
               </p>
               <p className="text-[oklch(0.65_0.01_260)] leading-relaxed mb-6">
                 The six-week build season follows an iterative design process: prototype, test,
-                refine, and repeat. We use a combination of CNC routing, laser cutting, and
-                3D printing to manufacture custom parts with tight tolerances.
+                refine, and repeat. We use a combination of assembly, customization, and integration to
+                deliver a reliable robot for competition.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { label: "Design Tool", value: "Onshape" },
+                  { label: "Robot Platform", value: "2026 KitBot" },
                   { label: "Control System", value: "WPILib / Java" },
                   { label: "Build Time", value: "6 weeks" },
-                  { label: "Robot Weight", value: "~52 lbs" },
+                  { label: "Robot Weight", value: "~120 lbs" },
                 ].map((item) => (
                   <div key={item.label} className="bg-[oklch(0.18_0.008_260)] rounded p-3 border border-[oklch(0.28_0.008_260)]">
                     <div

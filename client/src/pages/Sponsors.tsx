@@ -14,10 +14,16 @@ const sponsorTiers = [
     borderColor: "oklch(0.82_0.18_85/0.4)",
     sponsors: [
       {
-        name: "Koç School",
-        description: "Our founding institution and primary supporter, providing facilities, funding, and mentorship for the team since 2019.",
-        website: "https://www.kocschool.k12.tr",
-        category: "Education",
+        name: "Boeing",
+        description: "Global aerospace and defense leader supporting STEM education and robotics innovation worldwide.",
+        website: "https://www.boeing.com",
+        category: "Corporate",
+      },
+      {
+        name: "Koç Holding",
+        description: "One of Turkey's largest conglomerates, supporting STEM education and innovation across the country.",
+        website: "https://www.koc.com.tr",
+        category: "Corporate",
       },
     ],
   },
@@ -28,16 +34,16 @@ const sponsorTiers = [
     borderColor: "oklch(0.75_0.12_75/0.3)",
     sponsors: [
       {
-        name: "Koç Holding",
-        description: "One of Turkey's largest conglomerates, supporting STEM education and innovation across the country.",
-        website: "https://www.koc.com.tr",
-        category: "Corporate",
+        name: "Fikret Yüksel Foundation",
+        description: "Supporting education and cultural initiatives in Turkey, committed to developing the next generation of leaders.",
+        website: "https://www.fikrtyukselvakfi.org.tr",
+        category: "Foundation",
       },
       {
-        name: "FIRST Turkey",
-        description: "The regional affiliate of FIRST Inspires, organizing FRC competitions and supporting teams across Turkey.",
-        website: "https://www.firstturkiye.org",
-        category: "Organization",
+        name: "UPS",
+        description: "Global logistics leader providing shipping and logistics support for our competition materials and robot transport.",
+        website: "https://www.ups.com",
+        category: "Logistics",
       },
     ],
   },
@@ -48,22 +54,16 @@ const sponsorTiers = [
     borderColor: "oklch(0.7_0.005_260/0.3)",
     sponsors: [
       {
-        name: "REV Robotics",
-        description: "Provides motor controllers, power distribution hardware, and pneumatics components used throughout our robot.",
-        website: "https://www.revrobotics.com",
-        category: "Hardware",
+        name: "Koç School",
+        description: "Our founding institution and primary supporter, providing facilities, funding, and mentorship for the team since 2019.",
+        website: "https://www.kocschool.k12.tr",
+        category: "Education",
       },
       {
-        name: "Onshape",
-        description: "Cloud-based CAD platform used by our design team to create and collaborate on robot models.",
-        website: "https://www.onshape.com",
-        category: "Software",
-      },
-      {
-        name: "National Instruments",
-        description: "Manufacturer of the roboRIO control system that powers every FRC robot.",
-        website: "https://www.ni.com",
-        category: "Hardware",
+        name: "FIRST Turkey",
+        description: "The regional affiliate of FIRST Inspires, organizing FRC competitions and supporting teams across Turkey.",
+        website: "https://www.firstturkiye.org",
+        category: "Organization",
       },
     ],
   },
@@ -73,7 +73,7 @@ const impactAreas = [
   {
     icon: Wrench,
     title: "Parts & Materials",
-    desc: "Aluminum extrusion, motors, sensors, fasteners, and raw materials for fabrication.",
+    desc: "KitBot components, motors, sensors, fasteners, and raw materials for fabrication.",
     amount: "~40%",
   },
   {
@@ -91,7 +91,7 @@ const impactAreas = [
   {
     icon: Heart,
     title: "Outreach & Programs",
-    desc: "STEM workshops, community events, and educational materials.",
+    desc: "Podcasts, virtual museum tours, community events, and educational materials.",
     amount: "~10%",
   },
 ];
