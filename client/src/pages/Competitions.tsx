@@ -127,21 +127,7 @@ export default function Competitions() {
         </div>
       </section>
 
-      {/* Hero Image */}
-      <section className="pb-16">
-        <div className="container">
-          <AnimatedSection>
-            <div className="relative rounded-xl overflow-hidden border border-[oklch(0.28_0.008_260)]">
-              <img
-                src={COMP_IMG}
-                alt="FRC competition arena with robots in action"
-                className="w-full h-72 lg:h-80 object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.1_0.008_260/0.6)] to-transparent" />
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+
 
       {/* Stats */}
       <section className="py-10 bg-[oklch(0.11_0.008_260)] border-y border-[oklch(0.28_0.008_260)]">

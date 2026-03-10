@@ -95,29 +95,7 @@ export default function Engineering() {
         </div>
       </section>
 
-      {/* CAD Showcase */}
-      <section className="pb-16">
-        <div className="container">
-          <AnimatedSection>
-            <div className="relative rounded-xl overflow-hidden border border-[oklch(0.28_0.008_260)]">
-              <img
-                src={CAD_IMG}
-                alt="Exploded CAD render of RAMs 7729 robot subsystems"
-                className="w-full h-72 lg:h-96 object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.1_0.008_260/0.8)] to-transparent" />
-              <div className="absolute bottom-6 left-6">
-                <span
-                  className="text-[oklch(0.82_0.18_85)] text-xs tracking-widest uppercase"
-                  style={{ fontFamily: "JetBrains Mono, monospace" }}
-                >
-                  2025 Robot · Onshape CAD · Exploded Assembly View
-                </span>
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+
 
       {/* Engineering Areas */}
       <section className="py-16 bg-[oklch(0.11_0.008_260)]">

@@ -86,34 +86,7 @@ export default function Robot() {
         </div>
       </section>
 
-      {/* Hero Image */}
-      <section className="pb-16">
-        <div className="container">
-          <AnimatedSection>
-            <div className="relative rounded-xl overflow-hidden border border-[oklch(0.28_0.008_260)]">
-              <img
-                src={HERO_IMG}
-                alt="RAMs 7729 robot on the competition field"
-                className="w-full h-80 lg:h-[28rem] object-cover object-center"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.1_0.008_260/0.7)] to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="flex flex-wrap gap-3">
-                  {["Tank Drive", "Game Piece Intake", "Vision System", "KitBot", "2026"].map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 rounded bg-[oklch(0.82_0.18_85/0.15)] border border-[oklch(0.82_0.18_85/0.3)] text-[oklch(0.82_0.18_85)] text-xs"
-                      style={{ fontFamily: "JetBrains Mono, monospace" }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+
 
       {/* Subsystem Explorer */}
       <section className="py-16 bg-[oklch(0.11_0.008_260)]">

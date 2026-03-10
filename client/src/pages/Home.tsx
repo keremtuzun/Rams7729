@@ -66,13 +66,11 @@ export default function Home() {
             </div>
 
             <div className="flex items-start gap-6 mb-6">
-              <div className="w-32 h-32 bg-black rounded flex items-center justify-center flex-shrink-0 hidden sm:flex">
-                <img
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663418944140/X4Be2XfiomkNw7gY9gk5Hg/52135199_1023279997878410_4518729955340713984_n_fca10169.jpg"
-                  alt="RAMs 7729 Logo"
-                  className="w-28 h-28"
-                />
-              </div>
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663418944140/X4Be2XfiomkNw7gY9gk5Hg/403923818_1396815704525545_1507094903593979583_n_615cc946.jpg"
+                alt="RAMs 7729 Logo"
+                className="w-32 h-32 flex-shrink-0 hidden sm:block"
+              />
               <div>
                 <h1
                   className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-none mb-6"
