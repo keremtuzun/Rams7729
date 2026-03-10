@@ -21,7 +21,7 @@ const subsystems = [
     details:
       "Our 2026 KitBot uses a traditional tank drive configuration with two independent drive motors — one for the left side and one for the right side. This simple yet effective drivetrain provides excellent traction and predictable handling on the competition field. The tank drive is controlled through arcade or tank drive input, allowing the driver to smoothly accelerate, decelerate, and rotate the robot with precision.",
     specs: [
-      { label: "Drive Motors", value: "2× Falcon 500" },
+      { label: "Drive Motors", value: "Falcon 500, SparkMax" },
       { label: "Gearbox", value: "KitBot Gearbox" },
       { label: "Max Speed", value: "~3.5 m/s" },
       { label: "Wheelbase", value: "KitBot Standard" },
@@ -36,7 +36,7 @@ const subsystems = [
     details:
       "Our intake system uses a single Falcon 500 motor driving compliant wheels to collect game pieces from the floor. The intake is mounted at an optimal angle to smoothly guide pieces into the robot's storage area. A beam-break sensor detects when a piece is fully indexed, allowing the drive team to know when the robot is ready to score. The intake can be quickly raised or lowered depending on game strategy.",
     specs: [
-      { label: "Intake Motor", value: "Falcon 500" },
+      { label: "Intake Motor", value: "Talon, SparkMax" },
       { label: "Wheel Material", value: "Compliant Wheels" },
       { label: "Sensor", value: "Beam-break Detector" },
       { label: "Control", value: "Simple On/Off" },

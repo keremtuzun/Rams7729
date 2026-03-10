@@ -80,18 +80,11 @@ export default function About() {
         </div>
       </section>
 
-      {/* Story + Workshop Image */}
+      {/* Story */}
       <section className="py-16 lg:py-20">
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
             <AnimatedSection>
-              <img
-                src={WORKSHOP_IMG}
-                alt="RAMs 7729 students working in the robotics workshop"
-                className="w-full rounded-lg border border-[oklch(0.28_0.008_260)] aspect-video object-cover"
-              />
-            </AnimatedSection>
-            <AnimatedSection delay={150}>
               <div className="section-label mb-3">Our Story</div>
               <h2
                 className="text-3xl lg:text-4xl font-bold text-[oklch(0.94_0.005_65)] mb-5"
