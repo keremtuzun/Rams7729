@@ -215,40 +215,7 @@ export default function Engineering() {
               </div>
             </AnimatedSection>
 
-            <AnimatedSection delay={150}>
-              <div className="rounded-lg overflow-hidden border border-[oklch(0.28_0.008_260)]">
-                <div className="bg-[oklch(0.11_0.008_260)] px-4 py-2.5 flex items-center gap-2 border-b border-[oklch(0.28_0.008_260)]">
-                  <div className="flex gap-1.5">
-                    <div className="w-3 h-3 rounded-full bg-[oklch(0.55_0.2_27)]" />
-                    <div className="w-3 h-3 rounded-full bg-[oklch(0.75_0.18_85)]" />
-                    <div className="w-3 h-3 rounded-full bg-[oklch(0.65_0.2_145)]" />
-                  </div>
-                  <span
-                    className="text-[oklch(0.5_0.01_260)] text-xs ml-2"
-                    style={{ fontFamily: "JetBrains Mono, monospace" }}
-                  >
-                    RobotContainer.java
-                  </span>
-                </div>
-                <pre
-                  className="bg-[oklch(0.15_0.008_260)] p-5 text-xs leading-relaxed overflow-x-auto"
-                  style={{ fontFamily: "JetBrains Mono, monospace" }}
-                >
-                  <code>
-                    {codeSnippet.split("\n").map((line, i) => {
-                      const isComment = line.trim().startsWith("//");
-                      const isKeyword = /\b(new|SwerveDrivePoseEstimator|poseEstimator|addVisionMeasurement|Timer|kinematics|gyro|modulePositions|initialPose|stateStdDevs|visionStdDevs|limelightPose|latency)\b/.test(line);
-                      return (
-                        <span key={i} className={isComment ? "text-[oklch(0.5_0.01_260)]" : "text-[oklch(0.8_0.005_65)]"}>
-                          {line}
-                          {"\n"}
-                        </span>
-                      );
-                    })}
-                  </code>
-                </pre>
-              </div>
-            </AnimatedSection>
+
           </div>
         </div>
       </section>

@@ -25,22 +25,6 @@ const programs = [
     impact: "500+ students reached",
     frequency: "Ongoing access",
   },
-  {
-    icon: BookOpen,
-    title: "STEM Workshops",
-    tag: "Education",
-    desc: "We run hands-on robotics workshops for elementary and middle school students, introducing them to programming, electronics, and mechanical design through interactive activities. Students build simple robots, learn basic coding concepts, and experience the excitement of making something move.",
-    impact: "200+ students reached",
-    frequency: "Monthly sessions",
-  },
-  {
-    icon: Users,
-    title: "FLL Mentorship",
-    tag: "Mentorship",
-    desc: "RAMs 7729 members mentor FIRST LEGO League (FLL) teams at Koç School and in the broader Istanbul community. We help younger students understand the engineering design process, prepare for competitions, and develop the teamwork skills that are central to FIRST's mission.",
-    impact: "4 FLL teams mentored",
-    frequency: "Seasonal program",
-  },
 ];
 
 const activities = [
