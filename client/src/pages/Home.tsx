@@ -200,23 +200,7 @@ export default function Home() {
               </div>
             </AnimatedSection>
 
-            <AnimatedSection delay={150}>
-              <div className="relative rounded-lg overflow-hidden border border-[oklch(0.28_0.008_260)]">
-                <img
-                  src={ROBOT_CAD_IMG}
-                  alt="RAMs 7729 robot CAD render with subsystem labels"
-                  className="w-full aspect-video object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[oklch(0.1_0.008_260)] to-transparent">
-                  <span
-                    className="text-[oklch(0.82_0.18_85)] text-xs tracking-widest uppercase"
-                    style={{ fontFamily: "JetBrains Mono, monospace" }}
-                  >
-                    2025 Season · Swerve Drive · Elevator · Vision
-                  </span>
-                </div>
-              </div>
-            </AnimatedSection>
+
           </div>
         </div>
       </section>
@@ -224,39 +208,27 @@ export default function Home() {
       {/* ── Competitions Preview ── */}
       <section className="py-20 lg:py-28 relative overflow-hidden">
         <div className="container">
-          <div className="relative rounded-xl overflow-hidden">
-            <img
-              src={COMPETITION_IMG}
-              alt="FRC competition arena with robots in action"
-              className="w-full h-80 lg:h-96 object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.1_0.008_260/0.9)] to-[oklch(0.1_0.008_260/0.5)]" />
-            <div className="absolute inset-0 flex items-center">
-              <div className="container">
-                <AnimatedSection>
-                  <div className="max-w-lg">
-                    <div className="section-label mb-3">On the Field</div>
-                    <h2
-                      className="text-4xl lg:text-5xl font-bold text-white mb-4"
-                      style={{ fontFamily: "Rajdhani, sans-serif" }}
-                    >
-                      Competing at the <span className="text-[oklch(0.82_0.18_85)]">Highest Level</span>
-                    </h2>
-                    <p className="text-[oklch(0.8_0.005_65)] mb-6 text-sm leading-relaxed">
-                      From the Bosphorus Regional to international events, RAMs 7729 competes
-                      with determination and sportsmanship at every tournament.
-                    </p>
-                    <Link
-                      href="/competitions"
-                      className="btn-gold inline-flex items-center gap-2 px-6 py-3 rounded text-sm"
-                    >
-                      View Results <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </div>
-                </AnimatedSection>
-              </div>
+          <AnimatedSection>
+            <div className="max-w-lg">
+              <div className="section-label mb-3">On the Field</div>
+              <h2
+                className="text-4xl lg:text-5xl font-bold text-white mb-4"
+                style={{ fontFamily: "Rajdhani, sans-serif" }}
+              >
+                Competing at the <span className="text-[oklch(0.82_0.18_85)]">Highest Level</span>
+              </h2>
+              <p className="text-[oklch(0.8_0.005_65)] mb-6 text-sm leading-relaxed">
+                From the Bosphorus Regional to international events, RAMs 7729 competes
+                with determination and sportsmanship at every tournament.
+              </p>
+              <Link
+                href="/competitions"
+                className="btn-gold inline-flex items-center gap-2 px-6 py-3 rounded text-sm"
+              >
+                View Results <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
