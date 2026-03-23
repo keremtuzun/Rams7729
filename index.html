@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RAMs 7729 – FIRST Robotics Competition Team</title>
+<link rel="icon" href="logo.png" type="image/x-icon" />
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -314,13 +315,21 @@
 <!-- ROBOT -->
 <section id="robot">
   <div class="robot-layout">
+    
+    <!-- LEFT SIDE (IMAGE) -->
     <div class="reveal">
+      <img src="robot-photo.jpeg" alt="2026 FRC Robot" class="robot-image">
     </div>
+
+    <!-- RIGHT SIDE (TEXT) -->
     <div class="reveal reveal-delay-1">
       <div class="section-label">Current Season</div>
       <h2 class="section-title">The <span class="yel">2026</span><br>Robot</h2>
       <div class="robot-season">REBUILT — FRC AGE 2025–26</div>
-      <p class="robot-desc">Our 2025–26 REBUILT robot is engineered to score fuel, cross obstacles, and climb the tower. Building on lessons from every prior season, the team focused on reliable autonomous routines, a robust tank drivetrain, and a simplified yet effective climbing mechanism.</p>
+      <p class="robot-desc">
+        Our 2025–26 REBUILT robot is engineered to score fuel and cross obstacles
+      </p>
+
       <div class="robot-specs">
         <div class="spec-item"><div class="spec-key">Drivetrain</div><div class="spec-val">Tank Drive</div></div>
         <div class="spec-item"><div class="spec-key">Controller</div><div class="spec-val">RoboRIO 2.0</div></div>
@@ -329,8 +338,10 @@
         <div class="spec-item"><div class="spec-key">Language</div><div class="spec-val">Java / WPILib</div></div>
         <div class="spec-item"><div class="spec-key">CAD</div><div class="spec-val">Onshape</div></div>
       </div>
+
       <a href="#engineering" class="btn-primary">Explore Engineering →</a>
     </div>
+
   </div>
 </section>
 
@@ -369,7 +380,6 @@
   </div>
   <div class="eng-grid">
     <div class="eng-card reveal"><div class="eng-icon">🔩</div><h4>Tank Drivetrain</h4><p>We use tank modules, giving the robot full holonomic movement. We tune PID loops extensively during build season to achieve precise field-relative control.</p><span class="tag">MK4i Modules</span></div>
-    <div class="eng-card reveal reveal-delay-1"><div class="eng-icon">👁️</div><h4>Vision System</h4><p>Limelight 3 combined with AprilTag detection allows our autonomous routines to self-correct positioning in real time. We also use PhotonVision for game piece tracking and alignment assists.</p><span class="tag">Limelight 3</span></div>
     <div class="eng-card reveal reveal-delay-2"><div class="eng-icon">🖥️</div><h4>Software Architecture</h4><p>Built on WPILib with a command-based architecture. We use PathPlanner for autonomous trajectory generation and AdvantageKit for structured logging and replay-based debugging.</p><span class="tag">Java · WPILib</span></div>
     <div class="eng-card reveal"><div class="eng-icon">📐</div><h4>CAD & Design</h4><p>Every mechanism is modeled in Onshape before fabrication. We iterate through multiple design reviews and use FEA simulation to validate structural integrity before cutting metal.</p><span class="tag">Onshape</span></div>
     <div class="eng-card reveal reveal-delay-1"><div class="eng-icon">⚡</div><h4>Electrical Systems</h4><p>Custom wiring harnesses with labeled runs, PDH power management, and SparkMAX motor controllers throughout. Our electrical team designs layouts that survive a full competition day of matches.</p><span class="tag">SparkMAX · REV PDH</span></div>
