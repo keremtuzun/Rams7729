@@ -1,20 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // The main team website and the Scouting Platform are self-contained static
-  // HTML apps served from /public. The AI tool runs as a real Next.js route at
-  // /ai with its server-side API at /api/chat. Everything lives on one origin,
-  // so the Scouting Platform's localStorage data persists reliably.
-  async rewrites() {
-    return {
-      beforeFiles: [
-        // Main team website at the root.
-        { source: "/", destination: "/home.html" },
-        // Scouting Platform at clean URLs.
-        { source: "/strategy", destination: "/strategy/index.html" },
-        { source: "/scouting", destination: "/strategy/index.html" },
-      ],
-    };
-  },
+  // Everything lives in one Next.js app on one origin:
+  //   /          -> main team website        (app/route.ts)
+  //   /strategy  -> FRC Scouting Platform     (app/strategy/route.ts, alias /scouting)
+  //   /ai        -> RAMS AI assistant         (app/ai/page.tsx)
+  //   /api/chat  -> RAMS AI backend           (app/api/chat/route.ts)
+  // The static pages are embedded as bundled string modules (see
+  // scripts/embed-content.mjs) and served via route handlers, which deploy
+  // reliably on Vercel.
 };
 
 module.exports = nextConfig;

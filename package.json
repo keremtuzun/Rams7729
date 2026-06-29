@@ -5,6 +5,8 @@
   "description": "RAMS 7729 — unified team website hosting the main site, the Scouting Platform, and RAMS AI.",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/embed-content.mjs",
+    "predev": "node scripts/embed-content.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
