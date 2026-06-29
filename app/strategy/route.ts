@@ -2,10 +2,14 @@ import { strategyHtml } from "../_content/strategy";
 
 // FRC Scouting Platform, served at "/strategy". Self-contained; stores all user
 // data in localStorage on this single origin.
-export const dynamic = "force-static";
+// Dynamic so Vercel reliably routes the path to it.
+export const dynamic = "force-dynamic";
 
 export function GET() {
   return new Response(strategyHtml, {
-    headers: { "content-type": "text/html; charset=utf-8" },
+    headers: {
+      "content-type": "text/html; charset=utf-8",
+      "cache-control": "public, s-maxage=3600, stale-while-revalidate=86400",
+    },
   });
 }
