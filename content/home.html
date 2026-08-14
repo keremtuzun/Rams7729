@@ -225,10 +225,6 @@
   .footer-logo { font-family: var(--display); font-weight: 900; font-size: 1.4rem; letter-spacing: 0.05em; color: var(--white); }
   .footer-logo span { color: var(--y); }
   .footer-copy { font-family: var(--mono); font-size: 0.65rem; color: var(--gray); letter-spacing: 0.1em; text-align: center; }
-  .footer-social { display: flex; gap: 1.25rem; }
-  .social-link { width: 36px; height: 36px; border: 1px solid var(--y-border); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; color: var(--gray); font-size: 0.85rem; transition: border-color 0.2s, color 0.2s, background 0.2s; }
-  .social-link:hover { border-color: var(--y); color: #000; background: var(--y); }
-
   .reveal { opacity:0; transform:translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.visible { opacity:1; transform:translateY(0); }
   .reveal-delay-1 { transition-delay:0.1s; }
@@ -646,21 +642,29 @@
       <h2 class="section-title">Contact &<br><span class="yel">Connect</span></h2>
       <p class="section-desc">Whether you're a potential sponsor, a student interested in joining, a fellow FRC team, or just curious about what we do, we'd love to hear from you.</p>
       <div class="contact-channels">
-        <a href="#contact" class="contact-channel">
+        <a href="mailto:rams7729@koc.k12.tr" class="contact-channel">
           <span class="contact-channel-icon"></span>
           <div><div class="contact-channel-label">Email</div><div class="contact-channel-val">rams7729@koc.k12.tr</div></div>
         </a>
-        <a href="#contact" class="contact-channel">
+        <a href="https://www.instagram.com/kocfrc/" class="contact-channel" target="_blank" rel="noopener noreferrer">
           <span class="contact-channel-icon"></span>
           <div><div class="contact-channel-label">Instagram</div><div class="contact-channel-val">@kocfrc</div></div>
         </a>
-        <a href="#contact" class="contact-channel">
+        <a href="/ai" class="contact-channel">
           <span class="contact-channel-icon"></span>
-          <div><div class="contact-channel-label">YouTube</div><div class="contact-channel-val">@RAMs7729</div></div>
+          <div><div class="contact-channel-label">RAMS AI</div><div class="contact-channel-val">frcrams.com/ai</div></div>
         </a>
-        <a href="#contact" class="contact-channel">
+        <a href="/scouting" class="contact-channel">
           <span class="contact-channel-icon"></span>
-          <div><div class="contact-channel-label">GitHub</div><div class="contact-channel-val">rams-7729</div></div>
+          <div><div class="contact-channel-label">Scouting Platform</div><div class="contact-channel-val">frcrams.com/scouting</div></div>
+        </a>
+        <a href="https://forge.frcrams.com" class="contact-channel" target="_blank" rel="noopener noreferrer">
+          <span class="contact-channel-icon"></span>
+          <div><div class="contact-channel-label">RAMS Forge</div><div class="contact-channel-val">forge.frcrams.com</div></div>
+        </a>
+        <a href="https://sponsorpilot-eight.vercel.app" class="contact-channel" target="_blank" rel="noopener noreferrer">
+          <span class="contact-channel-icon"></span>
+          <div><div class="contact-channel-label">Sponsor Pilot</div><div class="contact-channel-val">sponsorpilot-eight.vercel.app</div></div>
         </a>
       </div>
     </div>
@@ -696,11 +700,6 @@
   <div class="footer-copy">
     © 2026 RAMs 7729 · FIRST Robotics Competition · Tuzla, Istanbul<br>
     <span style="opacity:0.4;">Designed & Built by the Team · rams7729.org</span>
-  </div>
-  <div class="footer-social">
-    <a href="#contact" class="social-link" title="Instagram">📸</a>
-    <a href="#contact" class="social-link" title="YouTube">▶</a>
-    <a href="#contact" class="social-link" title="GitHub">⌨</a>
   </div>
 </footer>
 
