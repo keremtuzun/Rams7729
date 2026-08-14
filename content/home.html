@@ -241,7 +241,30 @@
     .nav-links a::after { display: none; }
     .nav-links .nav-join { margin: 0.85rem 1.5rem; text-align: center; }
     section, #pillars { padding: 4rem 1.5rem; }
-    .hero-content { padding: 0 1.5rem 5rem; }
+
+    /* Keep the mobile hero photo and copy in separate visual zones. */
+    #hero {
+      height: auto;
+      min-height: 100svh;
+      display: block;
+      padding: clamp(260px, 40svh, 340px) 0 0;
+      background: var(--darker);
+    }
+    .hero-bg {
+      inset: 0 0 auto;
+      height: clamp(260px, 40svh, 340px);
+      background:
+        linear-gradient(to bottom, rgba(5,5,0,0.18) 0%, rgba(5,5,0,0.28) 58%, var(--darker) 100%),
+        url('team-photo.jpeg') 58% 30% / cover no-repeat;
+    }
+    .hero-content {
+      width: 100%;
+      max-width: none;
+      padding: 2.5rem 1.5rem 4rem;
+      background: var(--darker);
+    }
+    .hero-title { font-size: clamp(3rem, 16vw, 4.25rem); }
+    .hero-ctas { flex-wrap: wrap; }
     .hero-stats, .hero-badge { display: none; }
     #pillars { grid-template-columns: 1fr; }
     .robot-layout,.about-layout,.outreach-layout,.contact-layout { grid-template-columns:1fr; gap:2.5rem; }
@@ -249,6 +272,10 @@
     footer { flex-direction:column; gap:1.5rem; text-align:center; }
     .comp-header { flex-direction:column; align-items:flex-start; gap:1rem; }
     .event-row { grid-template-columns:1fr; gap:0.5rem; }
+  }
+
+  @media (max-width:480px) {
+    .hero-ctas a { width: 100%; justify-content: center; }
   }
 </style>
 </head>
