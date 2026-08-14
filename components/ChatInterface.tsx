@@ -91,7 +91,7 @@ export default function ChatInterface() {
     setLoading(true);
     setActiveTools([]);
 
-    // Build messages for the API — images become content blocks
+    // Build messages for the API; images become content blocks
     const apiMessages = newMessages.map(({ role, content, image }) => {
       if (image) {
         return {
@@ -217,7 +217,7 @@ export default function ChatInterface() {
                 RAMS AI
               </h2>
               <p className="text-white/50 max-w-md text-sm">
-                FRC Team 7729 assistant — ask about{" "}
+                FRC Team 7729 assistant · ask about{" "}
                 <span className="text-rams-yellow">REBUILT</span>, match data,
                 robot programming, and strategy. You can also{" "}
                 <span className="text-rams-yellow">upload a photo</span> for

@@ -1,4 +1,4 @@
-# RAMS 7729 — Unified Team Website
+# RAMS 7729: Unified Team Website
 
 One Next.js app, one domain. It hosts all three RAMS 7729 projects so they share
 a single origin (important: the Scouting Platform stores all user data in the
@@ -26,8 +26,8 @@ which is why the whole thing is a Next.js app deployed to Vercel.
 Copy `.env.local.example` to `.env.local` for local dev, and set these in the
 hosting provider (Vercel) for production:
 
-- `ANTHROPIC_API_KEY` — **required** for RAMS AI to work.
-- `TBA_API_KEY` — optional; enables live The Blue Alliance data lookups in RAMS AI.
+- `ANTHROPIC_API_KEY`: **required** for RAMS AI to work.
+- `TBA_API_KEY`: optional; enables live The Blue Alliance data lookups in RAMS AI.
 
 ## Local development
 

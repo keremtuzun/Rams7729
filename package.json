@@ -2,7 +2,7 @@
   "name": "rams7729-site",
   "version": "1.0.0",
   "private": true,
-  "description": "RAMS 7729 — unified team website hosting the main site, the Scouting Platform, and RAMS AI.",
+  "description": "RAMS 7729: unified team website hosting the main site, the Scouting Platform, and RAMS AI.",
   "scripts": {
     "dev": "next dev",
     "prebuild": "node scripts/embed-content.mjs",

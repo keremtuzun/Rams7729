@@ -17,9 +17,9 @@ const pages = [
 
 for (const { src, out, name } of pages) {
   const html = readFileSync(join(root, src), "utf-8");
-  // JSON.stringify produces a fully-escaped, valid JS string literal — safe for
+  // JSON.stringify produces a fully-escaped, valid JS string literal, safe for
   // any content including backticks and ${...} sequences in the embedded JS.
-  const module = `// AUTO-GENERATED from ${src} by scripts/embed-content.mjs — do not edit by hand.\nexport const ${name} = ${JSON.stringify(html)};\n`;
+  const module = `// AUTO-GENERATED from ${src} by scripts/embed-content.mjs. Do not edit by hand.\nexport const ${name} = ${JSON.stringify(html)};\n`;
   writeFileSync(join(outDir, out), module);
   console.log(`embed-content: ${src} -> app/_content/${out} (${html.length} bytes)`);
 }

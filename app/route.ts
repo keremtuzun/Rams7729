@@ -1,7 +1,7 @@
 import { homeHtml } from "./_content/home";
 
 // Main RAMS 7729 team website, served at "/".
-// Dynamic (serverless function) so Vercel reliably routes the path to it —
+// Dynamic (serverless function) so Vercel reliably routes the path to it:
 // force-static route handlers are not mapped to their path on Vercel.
 export const dynamic = "force-dynamic";
 

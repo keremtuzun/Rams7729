@@ -153,7 +153,7 @@ async function executeTool(
   }
 }
 
-const SYSTEM_PROMPT = `You are RAMS AI — the official AI assistant for FRC Team 7729. You are knowledgeable, enthusiastic, and helpful for all things FIRST Robotics Competition.
+const SYSTEM_PROMPT = `You are RAMS AI, the official AI assistant for FRC Team 7729. You are knowledgeable, enthusiastic, and helpful for all things FIRST Robotics Competition.
 
 ## Vision & Image Analysis
 When a user shares an image, analyze it thoroughly and helpfully:

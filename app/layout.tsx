@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "RAMS AI | FRC Team 7729",
   description:
-    "AI assistant for FRC Team 7729 — rules, scouting, strategy, and robot programming help.",
+    "AI assistant for FRC Team 7729: rules, scouting, strategy, and robot programming help.",
   icons: {
     icon: "/logo.jpg",
   },
